@@ -1,0 +1,9 @@
+{
+	"build-widget": {
+		"widgets": [
+			"src/app",
+            "src/page"
+		]
+	},
+	"extends": "./node_modules/@dojo/parade/parade.json"
+}

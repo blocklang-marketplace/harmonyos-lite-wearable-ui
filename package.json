@@ -1,0 +1,67 @@
+{
+    "name": "@blocklang/harmonyos-lite-wearable-ui",
+    "version": "0.0.1-alpha.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/blocklang-marketplace/harmonyos-lite-wearable-ui.git"
+    },
+    "scripts": {
+        "build:lib": "dojo build widget --mode dist --target lib && shx cp -r output/dist/* dist/",
+        "build:lib:legacy": "dojo build widget --mode dist --target lib -l && shx cp -r output/dist/* dist/",
+        "clean": "shx rm -rf dist && shx mkdir dist",
+        "build": "npm run clean && npm run build:lib && npm run build:lib:legacy && shx cp package.json dist/ && shx cp README.md dist/",
+        "dev": "dojo build --mode dev --watch --serve",
+        "test": "dojo test",
+        "test:unit": "dojo build --mode unit && dojo test --unit --config local",
+        "test:functional": "dojo build --mode functional && dojo test --functional --config local",
+        "test:all": "dojo build --mode unit && dojo build --mode functional && dojo test --all --config local",
+        "prettier": "prettier --write \"{src,tests}/**/*.{ts,tsx,css}\""
+    },
+    "dependencies": {
+        "@dojo/framework": "^7.0.5",
+        "bootstrap": "^4.5.3",
+        "@blocklang/bootstrap-classes": "^0.0.3-alpha.8",
+        "@blocklang/dojo-fontawesome": "^0.0.3-alpha.3",
+        "@fortawesome/fontawesome-svg-core": "^1.2.32",
+        "@fortawesome/free-brands-svg-icons": "^5.15.1",
+        "@fortawesome/free-regular-svg-icons": "^5.15.1",
+        "@fortawesome/free-solid-svg-icons": "^5.15.1",
+        "tslib": "~2.0.3"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^11.0.0",
+        "@commitlint/config-conventional": "^11.0.0",
+        "@dojo/cli": "^7.0.0",
+        "@dojo/cli-build-app": "^7.0.3",
+        "@dojo/cli-build-widget": "^7.0.0",
+        "@dojo/cli-test-intern": "^7.0.0",
+        "@types/node": "^14.14.10",
+        "@types/sinon": "9.0.9",
+        "husky": "^4.3.0",
+        "lint-staged": "^10.5.2",
+        "prettier": "^2.2.1",
+        "shx": "^0.3.3",
+        "sinon": "^9.2.1",
+        "typescript": "~3.9.6",
+        "@dojo/parade": "~1.0.0"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{ts,tsx,css}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "prettier": {
+        "singleQuote": false,
+        "tabWidth": 4,
+        "useTabs": true,
+        "printWidth": 120,
+        "arrowParens": "always"
+    }
+}
