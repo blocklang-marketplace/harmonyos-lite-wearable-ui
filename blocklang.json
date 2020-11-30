@@ -6,7 +6,7 @@
     "appType": "harmonyOS",
     "build": "dojo",
     "api": {
-        "git": "https://github.com/blocklang-marketplace/harmonyos-lite-wearable-ui.git",
+        "git": "https://github.com/blocklang-marketplace/api-harmonyos-lite-wearable-ui.git",
         "version": "main"
     },
     "components": [
