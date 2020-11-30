@@ -2,8 +2,9 @@
     "repo": "PROD",
     "name": "harmonyos-lite-wearable-ui",
     "category": "Widget",
-    "language": "JavaScript",
+    "language": "TypeScript",
     "appType": "harmonyOS",
+    "build": "dojo",
     "api": {
         "git": "https://github.com/blocklang-marketplace/harmonyos-lite-wearable-ui.git",
         "version": "main"
