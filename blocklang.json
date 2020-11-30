@@ -8,7 +8,7 @@
         "git": "https://github.com/blocklang-marketplace/harmonyos-lite-wearable-ui.git",
         "version": "main"
     },
-    "component": [
+    "components": [
         "src/app",
         "src/page"
     ]
