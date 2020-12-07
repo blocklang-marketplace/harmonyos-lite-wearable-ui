@@ -20,6 +20,18 @@ const factory = create({ theme }).properties<AppProperties>();
 export default factory(function App({ middleware: { theme } }) {
 	const themedCss = theme.classes(css);
 	return (
-		<div classes={[theme.variant(), themedCss.root, "align-middle", c.text_muted, c.text_center]}>配置应用程序</div>
+		<div
+			classes={[
+				theme.variant(),
+				themedCss.root,
+				c.d_flex,
+				c.justify_content_center,
+				c.align_items_center,
+				"h-100",
+				c.text_white,
+			]}
+		>
+			<div>配置应用程序</div>
+		</div>
 	);
 });
