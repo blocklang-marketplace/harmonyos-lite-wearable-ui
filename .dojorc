@@ -2,7 +2,8 @@
 	"build-widget": {
 		"widgets": [
 			"src/app",
-            "src/page"
+            "src/page",
+			"src/text"
 		]
 	},
 	"extends": "./node_modules/@dojo/parade/parade.json"
