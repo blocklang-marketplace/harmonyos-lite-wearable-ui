@@ -1,5 +1,6 @@
 import { create, tsx } from "@dojo/framework/core/vdom";
 import toStyle from "css-to-style";
+import * as css from "./Text.m.css";
 
 export interface TextProperties {
 	value?: string;
@@ -16,7 +17,7 @@ export default factory(function Text({ properties }) {
 	const objStyle = toStyle(style);
 
 	return (
-		<span classes={arrClass} styles={objStyle}>
+		<span classes={[css.root, ...arrClass]} styles={objStyle}>
 			{value}
 		</span>
 	);

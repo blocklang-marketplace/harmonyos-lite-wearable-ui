@@ -1,0 +1,14 @@
+/*在此文件中设置默认样式*/
+.root {
+	color: #ffffff;
+	font-size: 30px;
+	letter-spacing: 2px;
+	text-align: left;
+	text-overflow: clip;
+	font-family: HYQiHei-65S;
+	border-color: black;
+	display: flex;
+	padding: 0;
+	margin: 0;
+	border-width: 0;
+}
