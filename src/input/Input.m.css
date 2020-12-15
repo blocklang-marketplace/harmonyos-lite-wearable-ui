@@ -1,0 +1,25 @@
+/*在此文件中设置默认样式*/
+
+.button {
+	color: #ffffff;
+	font-size: 30px;
+	width: 100px;
+	height: 50px;
+	font-family: HYQiHei-65S;
+	padding: 0;
+	margin: 0;
+	border-width: 0;
+	border-color: black;
+	display: flex;
+}
+
+.checkbox {
+	color: #ffffff;
+	font-size: 30px;
+	font-family: HYQiHei-65S;
+	padding: 0;
+	margin: 0;
+	border-width: 0;
+	border-color: black;
+	display: flex;
+}

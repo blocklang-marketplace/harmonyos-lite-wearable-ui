@@ -5,13 +5,13 @@ import * as css from "./Text.m.css";
 export interface TextProperties {
 	value?: string;
 	style?: string;
-	classes?: string;
+	class?: string;
 }
 
 const factory = create().properties<TextProperties>();
 
 export default factory(function Text({ properties }) {
-	const { value = "", classes = "", style = "" } = properties();
+	const { value = "", class: classes = "", style = "" } = properties();
 
 	const arrClass = classes.split(",").map((item) => item.trim());
 	const objStyle = toStyle(style);

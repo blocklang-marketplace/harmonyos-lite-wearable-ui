@@ -3,7 +3,8 @@
 		"widgets": [
 			"src/app",
             "src/page",
-			"src/text"
+			"src/text",
+			"src/input"
 		]
 	},
 	"extends": "./node_modules/@dojo/parade/parade.json"
